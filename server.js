@@ -7,7 +7,7 @@ const path=require("path")
 // CONFIG
 dotenv.config({path:"config/.env"})
 
-const PORT=process.env.PORT||5000;
+const PORT=process.env.PORT||8082;
 // DATABASE
 connectDataBase();
 
@@ -23,7 +23,7 @@ cloudinary.config({
 if(process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging'){
   app.use(express.static("frontend/build"))
   app.get('*',(req,res)=>{
-    res.sendFile(path.join(_dirname + 'frontend/build/index.html'))
+    res.sendFile(path.join(_dirname +'frontend/build/index.html'))
   })
 }
 
