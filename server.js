@@ -21,7 +21,12 @@ cloudinary.config({
 
 if(process.env.NODE_ENV=="production"){
   app.use(express.static("frontend/build"))
+  const path=require("path")
+  app.get('*',(req,res)=>{
+    res.sendFile(path.resolve(_dirname,'frontend','buid','index.html'))
+  })
 }
+
 
 app.listen(process.env.PORT, () => {
     console.log(`server is working on port no ${PORT}`);
