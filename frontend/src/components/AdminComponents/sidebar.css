@@ -1,0 +1,47 @@
+.Sidebar {
+	background-color: rgb(2, 8, 63);
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 25px;
+	row-gap: 15px;
+	padding-top: 10px;
+
+	/* flex-direction: column; */
+	/* padding: 4rem 0; */
+}
+
+.Sidebar h3 {
+	color: blue;
+	justify-self: center;
+	padding: 0px 10px 5px 10px;
+}
+
+.Sidebar > a {
+	color: white;
+	font-size: medium;
+	/* font-weight: 300 !important; */
+	align-self: baseline;
+}
+
+.css-1g86id8-MuiTreeItem-content .MuiTreeItem-label {
+	font-weight: 600 !important;
+  
+}
+
+.MuiTreeItem-label {
+  color: white;
+}
+/* .Sidebar p{
+    color: white;
+    font-size: medium;
+    font-weight: 300 !important;
+    align-self: baseline;
+  }  */
+
+/* .nav_options{
+    display: none ;
+  }
+
+  .nodisplay{
+    display: none;
+  } */

@@ -1,0 +1,99 @@
+.booking_container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    /* position: fixed; */
+    max-width: 100%;
+    
+    /* background-color: white; */
+}
+
+.booking_summary {
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    align-items: center;
+    width: 300px;
+    height: fit-content;
+    margin: 61px auto 61px auto;
+    left: 0;
+    right: 0;
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+}
+
+#title {
+    font-size: larger;
+    font-weight: 600;
+}
+
+#movie_name {
+    font-size: medium;
+    color: black;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.amount span {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.amount p {
+    font-size: 15px;
+}
+
+.movie_detail {
+    display: flex;
+    width: 93%;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid burlywood;
+    border-radius: 5px;
+    padding: 13px;
+
+}
+
+.movie_detail p {
+    font-size: small;
+    color: black;
+
+}
+
+.seatnumbers {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+
+}
+
+.line {
+    width: 250px;
+    border-bottom: 1px dotted blue;
+    margin: 5px 0px 5px 0px;
+}
+
+.booking_summary button {
+    background-color: crimson;
+    width: 93%;
+    padding: 7px 0px 7px 0px;
+    border: none;
+    margin: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.ticket_detail {
+    margin: 10px;
+    border: 1px solid burlywood;
+    padding: 13px;
+    border-radius: 5px;
+    width: 93%;
+
+}

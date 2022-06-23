@@ -1,0 +1,73 @@
+.person_container{
+    min-height: calc(100vh - 59px - 4.5vw);
+}
+.basic_data {
+    display: flex;
+    background-color: rgb(34, 34, 34);
+    padding: 30px 10px 30px 10px;
+}
+
+.basic_data img {
+    border-radius: 20px;
+    width: 250px;
+    height: 250px;
+    margin: 0px  32px 0px 32px;
+   
+}
+
+
+
+.personal_detail {
+    align-self: center;
+    color: white;
+    row-gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.personal_detail span {
+
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.1px;
+    padding-bottom: 2px;
+    font-size: 38px;
+
+}
+
+.personal_detail p
+{   color: white;
+    font-weight: 400;
+    padding-top: 9px;
+    letter-spacing: 0.2px;
+}
+.person_description >.heading{
+
+    font-weight:300 ;
+    font-size: 15px;
+}
+.description_container{
+    max-width: 70VW;
+    padding: 10px 0px 10px 4vw;
+}
+.descrptions{
+    color: black !important;
+}
+
+.paragraph{
+    margin: 15px 0px 20px 0px;
+    color: black;
+}
+
+@media screen and (max-width:600px) {
+    .basic_data{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description_container{
+        max-width: 100vw;
+        padding: 10px 0px 10px 4vw;
+    }
+    
+}

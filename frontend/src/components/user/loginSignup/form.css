@@ -1,0 +1,114 @@
+
+.form-box {
+   
+    background: rgb(2, 8, 63);
+    padding: 30px 50px 34px 50px;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+   
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+   
+}
+
+.form-box p{
+    color: cornflowerblue;
+   
+    
+}
+.form-box p span{
+    color: crimson;
+    font-weight: 700;
+    cursor: pointer;
+}
+.form-box p span:hover {
+    color: cornsilk;
+    border-bottom: 2px solid crimson
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-text {
+    width: 100%;
+    color: crimson;
+    width: 100%;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 5vh;
+    font-size: 2.5vw !important;
+
+}
+
+label {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: smaller;
+
+}
+
+.login-box {
+    border: 1px solid lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 5px;
+    font-size: 11pt;
+    background: white;
+    transition: 1s;
+    outline: none;
+    margin-bottom: 3vh;
+}
+
+.login-btn {
+    width: 55%;
+    justify-content: center;
+    align-items: center;
+    background-color: crimson;
+    color: white;
+    margin-top: 5px;
+    border-radius: 20px;
+    border: none;
+    font-size: 12pt;
+    height: 30px;
+    font-weight: 700;
+    transition: 1s;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.login-btn:hover {
+    transform: scale(1.03);
+    letter-spacing: 4px;
+    background-color: #7FFFD4;
+    color: #1E90FF;
+}
+
+.show {
+    display: block;
+    /* background-color: transparent;
+    height: 100vh; */
+    padding-top: 20px;
+  
+}
+
+.show.active {
+   display: none;
+} 

@@ -1,0 +1,35 @@
+.grid_image{
+
+    height:60px ;
+    width: 45px;
+    
+    /* style={{"height" : "130px", "width" : "90px"}} */
+}
+
+.grid_image:hover{
+    /* height:300px ;
+    width: 140px; */
+    transform: scale(3.5);
+    position: absolute;
+    display: block;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    transform-origin:10% top;
+    border-radius: 2PX;
+ 
+   
+}
+
+.MuiDataGrid-cell{
+       color: blue;
+       font-weight: 500 !important;
+       
+}
+.MuiDataGrid-columnHeaders{
+   
+    font-size: medium !important;
+    font-weight: bold !important;
+}
+
+
+

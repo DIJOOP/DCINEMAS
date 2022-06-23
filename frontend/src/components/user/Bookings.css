@@ -1,0 +1,132 @@
+.my_bookings{
+  width: 100vw;
+  overflow: hidden;
+  min-height:100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ 
+}
+.main_div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid blue;
+    margin: 10px;
+    width: fit-content;
+    background-color:wheat;
+    border-radius: 10px;
+}
+
+.booking_box{
+    display: flex;
+
+}
+.my_bookings>.heading{
+    text-decoration: underline;
+}
+
+.film_poster img{
+    width:160PX;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.theatre_data
+    {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    font-weight: 600;
+}
+
+
+.movie_title{
+    font-size: larger;
+    color: black;
+    font-weight: 700;
+}
+.ticket_data,.bookig_id{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 2px 30px 10px 30px;
+}
+.bookig_id{
+    justify-content: center;
+   
+}
+.bookig_id span{
+    font-size: small;
+    color: blue;
+}
+
+.bookig_id p{
+    font-size: small;
+}
+.price_data{
+    margin-top: 15px;
+    
+}
+.price_data div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.paid_amount{
+    border-top: 1px dotted blue;
+    margin-top: 10px;
+    padding-top: 8px;
+}
+
+.price_data div :first-child{
+    color: crimson;
+    font-size: small;
+}
+
+
+.cancel_button{
+    display: flex;
+    justify-content: flex-end;
+   
+   
+}
+.cancel_button button{
+    padding: 8px;
+    border-radius: 5px;
+    background-color: crimson;
+    border: none;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.cancel_button button:hover{
+   color: white;
+}
+.cancel_button span{
+    font-family: cursive;
+    color: crimson;
+    font-weight: 100;
+    font-size: smaller;
+}
+
+@media screen and (max-width: 650px){
+    .booking_box{
+flex-direction: column;
+    }
+    .film_poster{
+        display: flex;
+        justify-content: center;
+    }
+    .theatre_data{
+align-items: center;
+    }
+}
+/* .main_div
+{
+align-items: center;
+} */
+.movie_title{
+    align-self: center;
+}

@@ -1,0 +1,13 @@
+.admin_head{
+    display: flex;
+    justify-content: center;
+    color: blue;
+    font-size: larger;
+    font-weight: 800;
+    font-style: italic;
+    background-color: aqua;
+    padding: 10px;
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
+}

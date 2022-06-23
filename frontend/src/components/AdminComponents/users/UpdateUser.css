@@ -1,0 +1,14 @@
+.updateuser_Form{
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+
+    
+}
+
+.updateuser_Form >div{
+display: flex;
+column-gap: 50px;
+justify-content: center;
+align-items: baseline;
+}

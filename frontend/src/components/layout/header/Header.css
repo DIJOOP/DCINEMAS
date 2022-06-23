@@ -1,0 +1,153 @@
+.nav {
+	display: flex;
+	background-color: rgb(2, 8, 63);
+	align-items: center;
+	width: 100%;
+	justify-content: flex-end;
+	height: 4.8vw;
+	min-height: 52px;
+}
+
+
+ option:disabled {
+    color: gainsboro;
+    opacity: 0.6;
+  }
+
+
+.nav_container {
+	flex: 30%;
+	align-items: center;
+}
+
+.nav_container img {
+	width: 100%;
+	height: 4.5vw;
+	max-width: 180px;
+	cursor: pointer;
+}
+
+.nav_options,
+.nodisplay {
+	flex: 70%;
+	display: flex;
+}
+
+.nav_options ul,
+.nodisplay ul {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	color: aquamarine;
+}
+
+.nodisplay ul li,
+.nav_options ul li {
+	list-style: none;
+	color: antiquewhite;
+}
+
+.nodisplay ul li input,
+.nav_options ul li input {
+	height: 2.3vw;
+	width: 28vw;
+	border-radius: 7px;
+	border: none;
+	outline: none;
+	margin-inline: 10vw;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.nodisplay ul li select,
+.nav_options ul li select {
+	outline: none;
+	border: none;
+	background-color: transparent;
+	font-size: 15px;
+	color: dodgerblue;
+	cursor: pointer;
+}
+
+.nav_options ul li button,
+.nodisplay ul li button {
+	border-radius: 30px;
+	border: none;
+	width: 6.5vw;
+	height: 26px;
+	margin-inline: 2vw;
+	font-size: 15px;
+	color: rgb(196, 238, 248);
+	background-color: crimson;
+	cursor: pointer;
+}
+
+.menuicon {
+	display: none;
+}
+
+.userName {
+	color: crimson !important;
+	font-weight: bolder !important;
+	text-decoration: 2px underline blue !important;
+	cursor: auto !important;
+	background: transparent !important;
+}
+
+@media screen and (max-width: 700px) {
+	.nav {
+		width: 100;
+		box-sizing: border-box;
+	}
+
+	.nav_container img {
+		width: 120px;
+		height: 40px;
+	}
+
+	.nodisplay {
+		display: none;
+	}
+
+	.menuicon {
+		display: block;
+		cursor: pointer;
+	}
+
+	.nav_options {
+		flex-direction: column;
+		position: absolute;
+		top: 45px;
+		left: 0;
+		border-radius: 5px;
+		background-color: rgb(2, 8, 63);
+		z-index: 10;
+		width: 100vw;
+		align-items: center;
+	}
+
+	.nav_options ul {
+		flex-direction: column;
+	}
+
+	.search {
+		width: 80vw;
+	}
+
+	.nav_options ul li button,
+	.nav_options ul li input,
+	.nav_options ul li select {
+		width: 80vw;
+		margin: 5px 0px 5px 0px;
+		color: rgb(12, 12, 37);
+		font-weight: 600;
+		height: 25px;
+		border-radius: 10px;
+	}
+
+	.nav_options ul li input,
+	.nav_options ul li select {
+		background-color: whitesmoke;
+	}
+}

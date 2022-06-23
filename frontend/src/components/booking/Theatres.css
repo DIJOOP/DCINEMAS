@@ -1,0 +1,168 @@
+.movie_name {
+	display: flex;
+	background-color: rgb(2, 20, 99);
+	align-items: center;
+	padding: 15px;
+}
+
+.movie_namebox {
+	width: 50%;
+	display: flex;
+
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.movie_duration {
+	display: flex;
+	gap: 50px;
+}
+
+.date_container {
+	display: flex;
+	width: 50%;
+    flex-wrap: wrap;
+}
+
+.datebox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 5px;
+	background-color: red;
+	padding-inline: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.date_selected {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 5px;
+	padding-inline: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+	background-color: green;
+	
+}
+
+
+.datebox:hover {
+	background-color: green;
+}
+
+.star_ratng {
+	font-size: large;
+	font-weight: 700;
+	color: #ed6c02;
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+
+h4 {
+	display: flex;
+	align-items: center;
+}
+
+.thetrelist_container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	overflow: hidden;
+}
+
+.theatre_list {
+	display: flex;
+	padding: 25px;
+	gap: 30px;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px crimson;
+	border-style: solid;
+	margin: 3px;
+	width: auto;
+}
+
+.theatre_details {
+	width: 50%;
+	display: flex;
+}
+
+.name {
+	width: 50%;
+}
+
+.adress {
+	width: 50%;
+}
+
+.show_timing {
+	display: flex;
+	gap: 10px;
+	width: 50%;
+    flex-wrap: wrap;
+}
+
+.time {
+	background-color: bisque;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px blue;
+	border-style: solid;
+	cursor: pointer;
+}
+
+.time:hover {
+	background-color: green;
+}
+
+p {
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+	.theatre_list {
+		flex-direction: column;
+	}
+    .theatre_details{
+        flex-direction: column;
+    }
+    .show_timing{
+        width: 100%;
+    }
+    .name {
+        width: 100%;
+    }
+    
+    .adress {
+        width:  100%;
+    }
+    .movie_name{
+        width: 100vw;
+        flex-direction: column;
+        row-gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    .date_container{
+        width: 100%;
+        justify-content: center;
+        
+    }
+    h4 {
+       width: auto;
+    }
+    .movie_duration {
+flex-direction: column;
+gap: 5px;
+}
+
+}

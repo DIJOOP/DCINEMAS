@@ -1,0 +1,59 @@
+.timepicker{
+    width: 50%;
+    display: flex;
+    column-gap: 10px;
+    
+}
+
+.pick{
+    height: 10px;
+}
+
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input{
+    box-sizing: inherit !important;
+   height:  0.4375em !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    box-sizing: inherit !important;
+    height:  0.4375em !important;
+}
+
+.css-sghohy-MuiButtonBase-root-MuiButton-root{
+    height: 32px!important;
+}
+
+.selected_sub{
+    border: 1px solid yellowgreen;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.selected_date{
+    background-color: aqua;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    padding: 3px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.selected_time{
+    display: flex;
+    justify-content: space-around;
+    column-gap: 10px;
+    font-size: small;
+    color: aliceblue;
+    background-color: blueviolet;
+    margin: 5px;
+    border-radius: 4px;
+    padding: 3px;
+    font-weight: 500;
+
+}

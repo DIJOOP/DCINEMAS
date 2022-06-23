@@ -1,0 +1,98 @@
+.Des_description{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#Des_button{
+    padding: 2px 5px 2px 5px ;
+    margin: 5px;
+    font-size: small;
+    background-color: blue;
+}
+
+#Des_Input{
+    width: 100%;
+    padding: 5px 0px 5px 5px;
+    font-style: italic;
+    font-size: medium;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    border-radius: 10px;
+    
+}
+
+#Des_textarea{
+    height: 5vw;
+    border: none;
+    resize: vertical;
+    margin-top: 10px;
+   
+
+}
+
+.Des_showselected{
+    width: 100%;
+    border: 1px solid blue;
+    border-radius: 5px;
+  min-height: 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.Des_ShowBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 3px 5px 3px;
+    background-color: aqua;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.Des_ShowBox>div{
+
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+.Des_ShowBox svg{
+    margin-left: 10px;
+    color: blue;
+    cursor: pointer;
+}
+
+#Des_showData{
+    max-width: 100%;
+   color: black !important;
+   font-weight: 400 !important;
+   font-style: italic;
+   text-align: justify;
+}
+
+
+.role_box{
+    width: 50%;
+    display: flex;
+    justify-content:space-between ;
+}
+
+.role_box input{
+    width: 75%;
+}
+
+.role_selected{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.selected_time svg{
+    cursor: pointer;
+}

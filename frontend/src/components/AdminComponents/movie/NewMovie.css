@@ -1,0 +1,172 @@
+
+    .createform_container{
+        display: flex;
+
+    }
+
+    
+
+.left_side,
+.right_side
+ {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 30px;
+   
+}
+
+
+
+.input_box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: top;
+}
+
+
+
+.input_box >label{
+    text-align: left !important;
+    width: 50%;
+    font-size: medium;
+    color: blue;
+}
+
+.duration{
+    width: 50%;
+    display: flex;
+   
+}
+
+.duration>input{
+    padding: 2px 0px 2px 0px;
+    text-align: center;
+    font-size: medium;
+    
+}
+
+.input_box>input{
+    width: 50%;
+    padding: 5px 0px 5px 0px;
+   
+}
+
+
+.input_box>select{
+    width: 50%;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+   
+}
+
+
+#thumbnail_image{
+    max-width: 150px;
+    max-height: 230px;
+}
+
+#poster_image{
+    max-width: 500px;
+    max-height: 200px;
+}
+
+ .createform_container textarea{
+    width: 100%;
+}
+.create_button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.create_button>button{
+    background-color:blue;
+    color: aliceblue;
+    padding: 8px 10px 8px 10px;
+    font-size: medium;
+    font-weight: 600;
+    font-style: italic;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.create_button>button:hover{
+    transform: scale(1.022);
+}
+
+
+
+#crew_select_1{
+    width: 50%;
+}
+
+#crew_select_2{
+    width: 40%;
+    margin: 0% 1% 0% 2%;
+}
+
+#crew_select_btn{
+    width: 7%;
+    
+}
+
+.show_selected{
+
+    width: 100%;
+   
+    border: 1px solid blue;
+    border-radius: 5px;
+  min-height: 50px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.show_selected >span{
+   padding: 4px;
+    width: fit-content;
+    border-radius: 3px;
+    background-color: aqua;
+    margin: 4px;
+    
+  
+}
+
+.show_selected svg{
+    cursor: pointer;
+    align-self: center;
+}
+
+#crew_select_btn{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:750px) {
+    .createform_container{
+        flex-direction: column;
+    }
+    .left_side,
+.right_side{
+    width: 100%;
+}
+}
+
+
+@media screen and (max-width:350px) {
+    .createform_container{
+        flex-direction: column;
+    }
+    .left_side,
+.right_side{
+    width: 100%;
+}
+.input_box{
+    flex-direction: column;
+}
+
+}

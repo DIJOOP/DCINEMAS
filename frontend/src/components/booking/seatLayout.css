@@ -1,0 +1,179 @@
+.main_layout {
+	display: flex;
+	flex-direction: column;
+    width: 100vw;
+}
+
+.show_time {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 15px;
+	background-color: bisque;
+	padding: 10px;
+    flex-wrap: wrap ;
+    width: 100vw;
+}
+
+.slot {
+	padding: 7px;
+	border: 1px solid crimson;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.slot:hover {
+	background-color: green;
+}
+.slot_selected{
+	padding: 7px;
+	border: 1px solid crimson;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: green;
+}
+
+.layout_container {
+	display: flex;
+	justify-content: center;
+}
+
+.grid_container {
+	display: grid;
+	grid-template-columns: repeat(11, 30px);
+	grid-template-rows: auto;
+	justify-content: center;
+	column-gap: 3px;
+}
+
+.row {
+	display: grid;
+	justify-content: center;
+
+	align-items: center;
+}
+
+.seat,
+.seat_selected,
+.seat_booked {
+	width: 23px;
+	height: 23px;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	margin: 5px;
+	margin-inline: 5px;
+	
+	border-radius: 3px;
+	align-items: center;
+	border: 1px solid crimson;
+	font-size: smaller;
+}
+
+.seat{
+	cursor: pointer;
+}
+.seat_selected {
+	background-color: green;
+	cursor: pointer;
+}
+
+.seat_booked {
+	background-color: gray;
+	color: lightgrey;
+opacity: 0.2;
+cursor: not-allowed;
+	border: 1px solid grey;
+}
+
+.seat:hover {
+	background-color: green;
+}
+
+.row_order {
+	padding-right: 20PX;
+}
+
+.screen {
+	width: 250px;
+	height: 25px;
+	border: 1px solid crimson;
+	align-self: center;
+	margin-top: 50px;
+	padding-left: 100px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+
+.color_notes {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-left: 17px;
+}
+
+.note_box {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.note_box div {
+	width: 10px;
+	height: 10px;
+}
+
+.selected {
+	background-color: green;
+}
+
+.available {
+	border: 1px solid crimson;
+	color: crimson;
+}
+
+.booked {
+	background-color: gray;
+	opacity: 0.2;
+}
+
+.payment_box {
+	align-self: center;
+	display: flex;
+	width: 300px;
+	justify-content: center;
+	background-color: brown;
+	padding: 8px;
+	border-radius: 5px;
+	margin: 8px;
+	margin-left: 22px;
+	color: aquamarine;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.day_Shows{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap ;
+	gap: 10px;
+}
+@media screen and (max-width: 600px) {
+	.main_layout {
+		width: 100vw;
+	}
+
+	.layout_container {
+		width: 100vw;
+		padding: 5px;
+	}
+	.show_time{
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+	}
+
+	/* .grid_container {
+		
+	} */
+}

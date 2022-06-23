@@ -1,0 +1,117 @@
+.ratingcard_container {
+    width: 25vw;
+    height: 30vw;
+    min-width: 324px;
+    min-height: 374px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+
+}
+
+.card_title {
+    display: flex;
+    border-bottom-style: groove;
+    padding-bottom: 5px;
+}
+
+.name_box {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(2, 14, 10);
+
+}
+
+.close_btn {
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+}
+
+.close_btn svg {
+    color: rgb(48, 94, 3);
+    margin: 5px;
+    cursor: pointer;
+
+}
+.close_btn svg:hover {
+ color: blue;
+}
+
+.question {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.film_title {
+    font-size: medium;
+    font-weight: 500;
+}
+
+label {
+    color: #ed6c02 !important;
+}
+
+.rating_stars {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.text {
+    font-size: large;
+    font-weight: 600;
+}
+
+.value {
+    font-size: large;
+    font-weight: 700;
+    color: #ed6c02;
+}
+
+.comment_input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 85%;
+    height: 8vw;
+    border-radius: 15px;
+    font-family: cursive;
+    font-style: italic;
+    color: #ed6c02;
+    outline: #ed6c02;
+    padding: 5px;
+   
+}
+
+.comment_input button {
+    cursor: pointer;
+    background-color: #ed6c02;
+    color: antiquewhite;
+    width: 70px;
+    border-radius: 5px;
+    padding: 3px;
+    font-weight: 600;
+    border: none;
+}
+
+.comment_input button:hover {
+    background-color: chocolate;
+}
