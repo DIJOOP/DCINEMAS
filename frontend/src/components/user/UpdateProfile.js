@@ -50,6 +50,16 @@ const UpdateProfile = () => {
 		dispatch(updateProfile(userData));
 	};
 
+
+
+	useEffect(() => {
+		dispatch({ type: 'CHANGESHOW_REQUEST' });
+
+		return () => {
+			dispatch({ type: 'CHANGESHOW_RESET' });
+		};
+	}, []);
+
 	useEffect(
 		() => {
 			if (error) {

@@ -1,12 +1,20 @@
-import React, { Fragment } from 'react';
-import { useSelector } from 'react-redux';
-import { Link} from 'react-router-dom';
+import React, { Fragment, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import './Profile.css';
 import nouser from '../../images/nouser.png';
 
 const Profile = () => {
-	const {  user } = useSelector((state) => state.user);
+	const { user } = useSelector((state) => state.user);
+	const dispatch = useDispatch();
 
+	useEffect(() => {
+		dispatch({ type: 'CHANGESHOW_REQUEST' });
+
+		return () => {
+			dispatch({ type: 'CHANGESHOW_RESET' });
+		};
+	}, []);
 	return (
 		<Fragment>
 			<div className="mainbody">

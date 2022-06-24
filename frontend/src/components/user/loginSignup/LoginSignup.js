@@ -7,7 +7,6 @@ import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { Register } from '../../../actions/userAction';
 
-
 const LoginSignup = () => {
 	const [ isShowLogin, setIsShowLogin ] = useState(true);
 	const [ isShowRegister, setIsShowRegister ] = useState(false);
@@ -19,7 +18,7 @@ const LoginSignup = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	// let a = '';
-	const { error,  isAuthenticated } = useSelector((state) => state.user);
+	const { error, isAuthenticated } = useSelector((state) => state.user);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -61,6 +60,14 @@ const LoginSignup = () => {
 		},
 		[ error, isAuthenticated ]
 	);
+
+	useEffect(() => {
+		dispatch({ type: 'CHANGESHOW_REQUEST' });
+
+		return () => {
+			dispatch({ type: 'CHANGESHOW_RESET' });
+		};
+	}, []);
 
 	return (
 		<Fragment>

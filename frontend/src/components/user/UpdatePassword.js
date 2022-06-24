@@ -46,7 +46,15 @@ const UpdatePassword = () => {
 		},
 		[ dispatch, toast, error, navigate, isUpdated ]
 	);
+	
 
+	useEffect(() => {
+		dispatch({ type: 'CHANGESHOW_REQUEST' });
+
+		return () => {
+			dispatch({ type: 'CHANGESHOW_RESET' });
+		};
+	}, []);
 	return (
 		<Fragment>
 			{loading ? (
