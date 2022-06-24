@@ -1,30 +1,47 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './RatingCard.css';
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import { useDispatch, useSelector } from 'react-redux';
-import { newReview } from '../../actions/moviesAction';
+import { getMovieDetail, newReview } from '../../actions/moviesAction';
 import { NavLink } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { REVIEW_RESET } from '../../constants/moviesConstants';
 
 const RatingCard = ({ showReview, film }) => {
 	const [ rating, setRating ] = useState(0);
 	const [ comment, setComment ] = useState('');
 
-	const {isAuthenticated}=useSelector(state=>state.user)
+	const { isAuthenticated } = useSelector((state) => state.user);
+	const { success } = useSelector((state) => state.newReview);
 
-	const dispatch=useDispatch()
+	const dispatch = useDispatch();
 
-	const handleSumbit = () => {
+	const handleSumbit = (e) => {
+		e.preventDefault()
 		const reviewData = {
 			comment,
 			rating,
 			MovieId: film && film._id
 		};
 
-		dispatch(newReview(reviewData))
-
+		dispatch(newReview(reviewData));
 	};
+
+
+
+	useEffect(
+		() => {
+			if (success) {
+				showReview();
+				toast.success('review updated successfully');
+				dispatch({type:REVIEW_RESET})
+				dispatch(getMovieDetail(film._id));
+			}
+		},
+		[ success ]
+	);
 
 	return (
 		<form onSubmit={handleSumbit}>
@@ -69,7 +86,13 @@ const RatingCard = ({ showReview, film }) => {
 						value={comment}
 						required
 					/>
-					{isAuthenticated?<button type="submit"> Submit</button>:<div>Please <NavLink to="/login">Login</NavLink>  to submit your review</div>}
+					{isAuthenticated ? (
+						<button type="submit"> Submit</button>
+					) : (
+						<div>
+							Please <NavLink to="/login">Login</NavLink> to submit your review
+						</div>
+					)}
 				</div>
 			</div>
 		</form>

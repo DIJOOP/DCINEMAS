@@ -58,7 +58,6 @@ const SeatLayout = () => {
 		}
 	};
 
-
 	const timeSlotHandler = (showIndex, timeIndex, showelement, timedata) => {
 		setSeatLayout(theatre && theatre.shows[showIndex].showtime[timeIndex].seat);
 
@@ -90,6 +89,8 @@ const SeatLayout = () => {
 				theatre &&
 					theatre.shows.map((data) => {
 						if (data.date === params.date) {
+							setTimeId((timeId) => data.showtime[params.timeIndex]._id);
+							setDateId((dateId) => data._id);
 							setSeatLayout((seatLayout) => data.showtime[params.timeIndex].seat);
 							setTime((time) => data.showtime[params.timeIndex].time);
 						}

@@ -1,28 +1,21 @@
-.location_container{
-    width: 100vw;
-    height: 100vw;
-    top: 0;
-    position: fixed;
-    z-index: 100;
-  background-color: transparent;
-  backdrop-filter: blur(4px)
+.location_container {
+	width: 100vw;
+	height: 100vw;
+	top: 0;
+	position: fixed;
+	z-index: 100;
+	background-color: transparent;
+	backdrop-filter: blur(4px);
 }
 
-
-
-.autoselect_box{
-   
-   width: 40%;
-    display: flex;
-  align-self: center;
-   position: fixed; 
-   top: 16vw;
-   left:30vw;
-  z-index: 1000000;
-   opacity: 100%;
-   background-color: rgb(200, 200, 250);
-  
+.autoselect_box {
+	width: 40%;
+	display: flex;
+	align-self: center;
+	position: fixed;
+	top: 16vw;
+	left: 30vw;
+	z-index: 100;
+	/* opacity: 100%; */
+	background-color: rgb(200, 200, 250);
 }
-
-
-

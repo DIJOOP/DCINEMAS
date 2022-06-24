@@ -13,18 +13,18 @@ const Theatres = () => {
 
 	const [ dates, setDates ] = useState([]);
 	const [ dateindex, setDateindex ] = useState(0);
+	// const [ date, setDate ] = useState('');
 
 	const dispatch = useDispatch();
 	const params = useParams();
 	const navigate = useNavigate();
 
-	const handleclik = (theatreid, date, timeIndex) => {
-		console.log(theatreid, date, timeIndex);
+	const handleclik = (theatreid,date, timeIndex) => {
+		console.log(theatreid, timeIndex);
 		navigate(`/seatselect/${theatreid}/${date}/${timeIndex}`);
 	};
 
 	const handleDateindex = (index) => {
-		
 		setDateindex(index);
 	};
 
@@ -45,7 +45,6 @@ const Theatres = () => {
 					});
 
 				setDates(a.sort());
-
 			}
 			window.scroll(0, 0);
 		},
@@ -76,8 +75,7 @@ const Theatres = () => {
 							{dates &&
 								dates.map((data, index) => (
 									<div
-										
-										className={dateindex===index?"date_selected":"datebox"}
+										className={dateindex === index ? 'date_selected' : 'datebox'}
 										onClick={() => handleDateindex(index)}
 									>
 										<h4 className="date">{new Date(data).getDate()}</h4>
@@ -96,7 +94,8 @@ const Theatres = () => {
 											<div className="theatre_list">
 												<div className="theatre_details">
 													<div className="name">
-														<p>
+														<p
+														>
 															<VideoStableIcon />
 															{theatreData.name}
 														</p>
@@ -113,7 +112,8 @@ const Theatres = () => {
 														<div
 															className="time"
 															onClick={(e) =>
-																handleclik(theatreData._id, showDate.date, timeIndex)}
+																handleclik(theatreData._id,showDate.date, timeIndex)}
+															
 														>
 															<span>{timedata.time}</span>
 														</div>

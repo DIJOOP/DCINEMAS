@@ -14,13 +14,16 @@ import { toast } from 'react-toastify';
 import Slider from '../layout/carosal/Slider';
 import Loader from "../layout/Loader/Loader"
 
+
 const MovieDetail = () => {
 	const { movie, loading: movieLoading } = useSelector((state) => state.movieDetail);
+	const { success } = useSelector((state) => state.newReview);
 	const { theatres} = useSelector((state) => state.theatres);
 	const { movies } = useSelector((state) => state.allMovies);
 	const [ review, setReview ] = useState(false);
 	const [ upcoming, setUpcoming ] = useState(false);
 	const [ upComingMovies, setUpComingMovies ] = useState(false);
+
 
 	const params = useParams();
 	const dispatch = useDispatch();
@@ -48,6 +51,8 @@ const MovieDetail = () => {
 		},
 		[ params.id, movie, theatres ]
 	);
+
+
 
 	useEffect(
 		() => {

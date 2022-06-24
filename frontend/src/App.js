@@ -39,7 +39,7 @@ import LoginSignup from './components/user/loginSignup/LoginSignup';
 import Player from './components/moveidetail/Player';
 import Slider from './components/layout/carosal/Slider';
 import NotFound from './components/layout/notFound/NotFound';
-import TEST from './components/TEST';
+
 
 
 function App() {
@@ -78,7 +78,7 @@ function App() {
 				<Route path="*" element={<NotFound unKnown={true}/>} />
 
 
-				<Route path="/test" element={<TEST/>} />
+			
 
 				{/* protected routes */}
 				<Route element={<RequireAuth allowedRoles={[ ROLES.Admin, ROLES.User ]} />}>
