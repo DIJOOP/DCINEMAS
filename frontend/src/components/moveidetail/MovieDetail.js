@@ -13,6 +13,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { toast } from 'react-toastify';
 import Slider from '../layout/carosal/Slider';
 import Loader from "../layout/Loader/Loader"
+import { getTheatres } from '../../actions/theatreActions';
 
 
 const MovieDetail = () => {
@@ -48,6 +49,11 @@ const MovieDetail = () => {
 				}
 			}
 			window.scrollTo(0, 0);
+
+			if(!theatres){
+				dispatch(getTheatres(sessionStorage.getItem('Location')))
+			}
+
 		},
 		[ params.id, movie, theatres ]
 	);

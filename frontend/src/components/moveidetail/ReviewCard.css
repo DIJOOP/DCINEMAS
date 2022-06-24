@@ -47,7 +47,8 @@
 }
 
 .description p {
-    font-family: cursive;
+   
+    font-family: Arial, sans-serif;
     text-align: justify;
     font-style: italic;
 

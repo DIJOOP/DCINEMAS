@@ -64,8 +64,9 @@
 
     .image {
 
-        height: 30vw;
+       min-height: 45vw;
         width: 100vw;
+        max-height: 45vw;
        
     }
 

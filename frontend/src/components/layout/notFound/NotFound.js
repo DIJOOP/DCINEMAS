@@ -1,7 +1,7 @@
 import React from 'react';
 import noshow from '../../../images/noshow.png';
 import './notFound.css';
-import notfound from '../../../images/404.jpg';
+import notfound from '../../../images/404.png';
 
 const NotFound = ({ unKnown }) => {
 	return (

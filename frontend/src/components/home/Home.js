@@ -68,10 +68,9 @@ const Home = () => {
 
 			dispatch(getTheatres(sessionStorage.getItem('Location')));
 		},
-		[ user, location ]
+		[  ]
 	);
 
-	useEffect(() => {}, [ window.innerWidth ]);
 
 	return (
 		<Fragment>
