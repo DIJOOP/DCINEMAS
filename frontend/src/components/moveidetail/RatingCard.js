@@ -14,7 +14,7 @@ const RatingCard = ({ showReview, film }) => {
 	const [ comment, setComment ] = useState('');
 
 	const { isAuthenticated } = useSelector((state) => state.user);
-	const { success } = useSelector((state) => state.newReview);
+	const { success,loading } = useSelector((state) => state.newReview);
 
 	const dispatch = useDispatch();
 
@@ -87,7 +87,7 @@ const RatingCard = ({ showReview, film }) => {
 						required
 					/>
 					{isAuthenticated ? (
-						<button type="submit"> Submit</button>
+						<button style={{cursor:loading?"wait":"pointer"}} type="submit"> Submit</button>
 					) : (
 						<div>
 							Please <NavLink to="/login">Login</NavLink> to submit your review
