@@ -14,7 +14,7 @@ const SeatLayout = () => {
 	const [ time, setTime ] = useState('');
 	const [ dateId, setDateId ] = useState(0);
 	const [ timeId, setTimeId ] = useState(0);
-	const [ tempindex, setTempindex ] = useState(0);
+	const [ ticketPrice, setTicketPrice ] = useState(0);
 
 	const navigate = useNavigate();
 	const refArray = useRef([]);
@@ -93,6 +93,9 @@ const SeatLayout = () => {
 							setDateId((dateId) => data._id);
 							setSeatLayout((seatLayout) => data.showtime[params.timeIndex].seat);
 							setTime((time) => data.showtime[params.timeIndex].time);
+							setTime((time) => data.showtime[params.timeIndex].time);
+							setTicketPrice((ticketPrice) =>theatre.ticketPrice);
+							
 						}
 					});
 			}
@@ -165,7 +168,7 @@ const SeatLayout = () => {
 
 					{selected.length != 0 && (
 						<div className="payment_box" onClick={handlePayment}>
-							Pay Rs {selected.length * 100}
+							Pay Rs {selected.length * ticketPrice}
 						</div>
 					)}
 				</div>
