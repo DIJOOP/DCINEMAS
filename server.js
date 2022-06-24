@@ -1,5 +1,7 @@
-const app= require("./app")
+// const app= require("./app")
+const express = require("express")
 const dotenv=require("dotenv");
+const app = express()
 const connectDataBase = require("./config/database");
 const cloudinary = require ("cloudinary")
 const path=require("path")
