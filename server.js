@@ -1,7 +1,7 @@
-// const app= require("./app")
+
 const express = require("express")
 const dotenv=require("dotenv");
-const app = express()
+const app = require("./app")
 const connectDataBase = require("./config/database");
 const cloudinary = require ("cloudinary")
 const path=require("path")
@@ -22,12 +22,6 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 })
 
-if(process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging'){
-  app.use(express.static("frontend/build"))
-  app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname ,'frontend','build','index.html'))
-  })
-}
 
 
 app.listen(process.env.PORT, () => {
