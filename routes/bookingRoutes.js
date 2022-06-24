@@ -8,7 +8,7 @@ router.post("/booking/new",isAuthenticatedUser,newBooking)
 router.get("/booking/me",isAuthenticatedUser,myBookings)
 
 router.get("/admin/bookings",isAuthenticatedUser,isAdmin,allBooking)
-router.delete("/admin/booking/delete/:id",isAuthenticatedUser,isAdmin,deleteBooking)
+router.delete("/admin/booking/delete/:id",isAuthenticatedUser,deleteBooking)
 
 
 module.exports=router
