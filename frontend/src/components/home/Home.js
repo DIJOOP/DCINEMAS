@@ -81,10 +81,11 @@ const Home = () => {
 					{!user && !sessionStorage.getItem('Location') ? <SelectLocation /> : ''}
 					<Carousel
 						responsive={responsive}
-						swipeable={false}
+						swipeable={true}
 						draggable={true}
 						showDots={false}
 						// centerMode={true}
+						removeArrowOnDeviceType={[ 'tablet' ]}
 						infinite={true}
 						autoPlay={true}
 						autoPlaySpeed={500}

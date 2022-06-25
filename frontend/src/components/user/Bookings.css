@@ -111,6 +111,39 @@
     font-size: smaller;
 }
 
+
+.emptyBooking{
+
+    /* margin: auto; */
+    text-align: center;
+    display: flex;
+    padding: 10vmax;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyBooking > svg{
+    font-size: 5vmax;
+    color: tomato;
+}
+
+.emptyBooking>p{
+    font-size: 2vmax;
+}
+
+.emptyBooking>a{
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    padding: 1vmax 3vmax;
+    cursor: pointer;
+    font: 400 1vmax "Roboto";
+    text-decoration: none;
+
+}
+
 @media screen and (max-width: 650px){
     .booking_box{
 flex-direction: column;

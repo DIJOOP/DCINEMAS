@@ -6,9 +6,11 @@ import { clearErrors, deleteBookingbyAdmin, myBookings } from '../../actions/boo
 import Loader from '../layout/Loader/Loader';
 import { toast } from 'react-toastify';
 import { DELETEBOOKING_RESET } from '../../constants/bookingConstants';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Alert from '../layout/alert/Alert';
 import { getTheatres } from '../../actions/theatreActions';
+import { Typography } from '@mui/material';
+import BookOnlineOutlinedIcon from '@mui/icons-material/BookOnlineOutlined';
 
 const MyBookings = () => {
 	const { bookings, loading } = useSelector((state) => state.myBookings);
@@ -34,7 +36,7 @@ const MyBookings = () => {
 
 	useEffect(
 		() => {
-			 dispatch(myBookings());
+			dispatch(myBookings());
 
 			if (deleteError) {
 				toast.error(deleteError);
@@ -49,13 +51,11 @@ const MyBookings = () => {
 				dispatch(getTheatres(sessionStorage.getItem('Location')));
 			}
 		},
-		[  dispatch, deleteError, isDeleted ]
+		[ dispatch, deleteError, isDeleted ]
 	);
 
 	useEffect(() => {
-		
 		dispatch({ type: 'CHANGESHOW_REQUEST' });
-		
 
 		return () => {
 			dispatch({ type: 'CHANGESHOW_RESET' });
@@ -64,7 +64,7 @@ const MyBookings = () => {
 
 	return (
 		<Fragment>
-			{loading||deleteLoading ? (
+			{loading || deleteLoading ? (
 				<Loader />
 			) : (
 				<div className="mainbody">
@@ -74,7 +74,14 @@ const MyBookings = () => {
 							MY BOOKINGS
 						</p>
 
-						{bookings &&
+						{bookings &&bookings.length === 0 ? (
+							<div className="emptyBooking">
+								<BookOnlineOutlinedIcon />
+								<Typography>You Haven't Placed Your First Booking Yet!</Typography>
+								<Link to="/"> View Movies</Link>
+							</div>
+						) : (
+							bookings &&
 							bookings.map((data) => (
 								<div className="main_div">
 									<div className="booking_box">
@@ -133,7 +140,8 @@ const MyBookings = () => {
 										<button onClick={() => cancelBookingHandler(data._id)}>Cancel Booking</button>
 									</div>
 								</div>
-							))}
+							))
+						)}
 					</div>
 				</div>
 			)}
