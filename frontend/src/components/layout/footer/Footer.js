@@ -7,7 +7,7 @@ const Footer = () => {
 			<div className="developer">
 				<h5>
 					Developed By &nbsp;
-					<a href="https://dijoop.github.io/MyResume/" target="_blank"  rel="noopener noreferrer" >
+					<a href="" target="_blank"  rel="noopener noreferrer" >
 						Dijoop
 					</a>
 				</h5>
